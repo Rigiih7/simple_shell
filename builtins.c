@@ -2,11 +2,10 @@
 
 #define SETOWD(V) (V = _strdup(_getenv("OLDPWD")))
 /**
- * change_dir - changes directory
- * @data: a pointer to the data structure
+ * change_dir - for changing the directory
+ * @data: pointer to data structure
  *
- * Return: (Success) 0 is returned
- * ------- (Fail) negative number will returned
+ * Return: 0 on success
  */
 int change_dir(sh_t *data)
 {
@@ -45,11 +44,10 @@ int change_dir(sh_t *data)
 }
 #undef GETCWD
 /**
- * abort_prg - exit the program
- * @data: a pointer to the data structure
+ * abort_prg - for exiting
+ * @data: the pointer to data structure
  *
- * Return: (Success) 0 is returned
- * ------- (Fail) negative number will returned
+ * Return: 0 on success
  */
 int abort_prg(sh_t *data __attribute__((unused)))
 {
@@ -73,10 +71,10 @@ int abort_prg(sh_t *data __attribute__((unused)))
 	exit(code);
 }
 /**
- * display_help - display the help menu
- * @data: a pointer to the data structure
+ * display_help - for displaying the help menu
+ * @data: the pointer to  data structure
  *
- * Return: (Success) 0 is returned
+ * Return: 0 on success
  * ------- (Fail) negative number will returned
  */
 int display_help(sh_t *data)
@@ -104,11 +102,10 @@ int display_help(sh_t *data)
 	return (SUCCESS);
 }
 /**
- * handle_builtin - handle and manage the builtins cmd
- * @data: a pointer to the data structure
+ * handle_builtin - for handling and managing builtins commands
+ * @data: the  pointer to data structure
  *
- * Return: (Success) 0 is returned
- * ------- (Fail) negative number will returned
+ * Return: 0 on success
  */
 int handle_builtin(sh_t *data)
 {
